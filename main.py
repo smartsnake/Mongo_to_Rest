@@ -17,7 +17,7 @@ db = client[data['database']]
 collection = db[data['collection']]
 
 @app.route("/", methods = ['GET'])
-def get_all_contact():
+def get_all():
     try:
         values = collection.find()
         return dumps(values)
