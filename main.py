@@ -27,3 +27,6 @@ def get_all_contact():
         return dumps(values)
     except Exception as e:
         return dumps({'error' : str(e)})
+
+if __name__ == '__main__':
+    app.run()
