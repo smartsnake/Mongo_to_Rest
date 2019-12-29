@@ -16,11 +16,7 @@ client = MongoClient(data['mongo_url'], int(data['mongo_port']))
 db = client[data['database']]
 collection = db[data['collection']]
 
-@app.route("/")
-def hello():
-    return "Hello, World!"
-
-@app.route("/get_all", methods = ['GET'])
+@app.route("/", methods = ['GET'])
 def get_all_contact():
     try:
         values = collection.find()
