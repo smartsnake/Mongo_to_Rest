@@ -29,4 +29,5 @@ def get_all_contact():
         return dumps({'error' : str(e)})
 
 if __name__ == '__main__':
-    app.run(host = '0.0.0.0')
+    app.debug = False
+    app.run(host='0.0.0.0')
